@@ -3,8 +3,8 @@
 #include<map>
 #include <climits>
 #define ll long long
-
 using namespace std;
+
 
 int main(){
     ll n, target;
@@ -15,8 +15,8 @@ int main(){
     for(ll &c : coins) cin >> c;
     dp[0] = 1;
 
-    for(ll t = 1; t <= target; t ++){
-        for(ll i = 0; i < coins.size(); i ++){
+    for(ll i = 0; i < coins.size(); i++){
+        for(ll t = coins[i]; t <= target; t ++){
             if(t < coins[i]) continue;
             dp[t] = (dp[t] + dp[t - coins[i]])%mod;
         }
