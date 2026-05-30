@@ -52,11 +52,11 @@ int main(){
 
     for(ll i = 1; i < n; i++){
         for(ll x = 1; x <= m; x ++){
-            if(v[i] != 0 && x != v[i]) dp[i][x] = 0;
+            if(v[i] != 0 && x != v[i]) dp[i][x] = 0; // 
             else{
                 for(ll y = x-1; y <= x+1; y++){
                     if(y >= 1 && y <= m){
-                        dp[i][x] = (dp[i][x] + dp[i-1][y]) % mod;
+                        dp[i][x] = (dp[i][x] + dp[i-1][y]) % mod; // [ x - 1, x , x + 1 ] all are valid combinations
                     }
                 }
             }
@@ -64,6 +64,6 @@ int main(){
     }
 
     ll cnt = 0;
-    for(ll x = 1; x <= m; x ++) cnt = (cnt + dp[n-1][x])%mod;
+    for(ll x = 1; x <= m; x ++) cnt = (cnt + dp[n-1][x])%mod; // count all the possible combination till the end of array
     cout << cnt << endl;
 }
