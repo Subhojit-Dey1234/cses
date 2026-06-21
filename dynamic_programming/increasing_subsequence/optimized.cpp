@@ -16,7 +16,7 @@ int main(){
     for(ll i = 0; i < n; i++){
         ll x;
         cin >> x;
-        auto it = upper_bound(dp.begin(), dp.end(), x);
+        auto it = lower_bound(dp.begin(), dp.end(), x);
 
         if(it == dp.end()) dp.push_back(x);
         else *it = x;
