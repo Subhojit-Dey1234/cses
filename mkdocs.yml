@@ -1,0 +1,69 @@
+site_name: CSES Solutions
+site_url: https://subhojit-dey1234.github.io/cses/
+site_description: CSES Problem Set solutions by Subhojit Dey
+repo_url: https://github.com/Subhojit-Dey1234/cses
+repo_name: Subhojit-Dey1234/cses
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Introduction:
+    - introduction/index.md
+    - Missing Number: introduction/missing_number.md
+    - Weird Algorithm: introduction/weird_algorithm.md
+    - Repetitions: introduction/repetitions.md
+    - Increasing Array: introduction/increasing_array.md
+  - Dynamic Programming:
+    - dynamic_programming/index.md
+    - Dice Combinations: dynamic_programming/dice_combinations.md
+    - Minimizing Coins: dynamic_programming/minimizing_coins.md
+    - Coins Combinations I: dynamic_programming/coins_combination_1.md
+    - Coins Combinations II: dynamic_programming/coins_combination_2.md
+    - Money Sums: dynamic_programming/money_sums.md
+    - Removal Game: dynamic_programming/removal_game.md
+    - Two Sets II: dynamic_programming/two_sets_2.md
+    - Book Shop: dynamic_programming/book_shop.md
+    - Rectangle Cutting: dynamic_programming/rectangle_cutting.md
+    - Counting Towers: dynamic_programming/counting_towers.md
+    - Grid Paths: dynamic_programming/grid_paths_1.md
+    - Edit Distance: dynamic_programming/edit_distance.md
+    - Longest Common Subsequence: dynamic_programming/longest_common_sequence.md
+    - Increasing Subsequence: dynamic_programming/increasing_subsequence.md
+    - Removing Digits: dynamic_programming/removing_digits.md
+    - Array Description: dynamic_programming/array_description.md
+    - Projects: dynamic_programming/projects.md
