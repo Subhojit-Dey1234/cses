@@ -56,6 +56,8 @@ public:
                 At any point, validLeft = how many past prefix sums are strictly less than cs?
                 When prefix sum drops by 1, 
                 the new question becomes: how many past prefix sums are strictly less than cs-1?
+
+                When prefix sum drops, subarrays get weaker. Some left endpoints that previously formed a majority subarray no longer do. So we subtract them.
                 */
                 validLeft -= (long long) mpp[cs-1];
                 cs --;
